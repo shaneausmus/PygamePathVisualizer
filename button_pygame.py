@@ -2,7 +2,7 @@ import pygame
 
 pygame.font.init()
 
-class button: 
+class button_pygame:
     def __init__(self, color, x, y, width, height, text):
         self.color = color
         self.x = x

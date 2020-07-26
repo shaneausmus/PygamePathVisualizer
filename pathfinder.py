@@ -1,8 +1,18 @@
-import pygame
-from button_pygame import *
-from time import sleep
-from queue import Queue
-from math import sqrt, pow
+
+try:
+    import pygame
+    from button_pygame import *
+    from time import sleep
+    from queue import Queue
+    from math import sqrt, pow      
+except:
+    import install_req_libraries
+
+    import pygame
+    from button_pygame import *
+    from time import sleep
+    from queue import Queue
+    import math
 
 pygame.init()
 WHITE = (255, 255, 255)
@@ -429,11 +439,11 @@ def run_a_star():
 make_grid()
 CHECK_QUIT = True
 
-bfs = button(GREEN, 30, 700, 100, 80, "Breadth-first")
-dfs = button(GREEN, 160, 700, 100, 80, "Depth-first")
-bidirectional = button(GREEN, 290, 700, 100, 80, "Bidirectional")
-a_star = button(GREEN, 420, 700, 100, 80, "A*")
-clear = button(GREEN, 550, 700, 100, 80, "Clear Board")
+bfs = button_pygame(GREEN, 30, 700, 100, 80, "Breadth-first")
+dfs = button_pygame(GREEN, 160, 700, 100, 80, "Depth-first")
+bidirectional = button_pygame(GREEN, 290, 700, 100, 80, "Bidirectional")
+a_star = button_pygame(GREEN, 420, 700, 100, 80, "A*")
+clear = button_pygame(GREEN, 550, 700, 100, 80, "Clear Board")
 btn_list = [bfs, dfs, bidirectional, a_star, clear]
 
 while CHECK_QUIT:
